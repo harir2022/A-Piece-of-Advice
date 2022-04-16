@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+#root,html,body{
+  margin: 0;padding: 0;
+  height: 100vh;box-sizing: border-box;
+}
+
+.App{
+  width: 100%;
+  height: 100vh;
+
+  background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5)) ,url('https://images.pexels.com/photos/1034662/pexels-photo-1034662.jpeg');
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  text-align: center;
+}
+.card{
+  background: rgba(255, 255, 255, 0.5);
+  width:40% ;
+   
+  display: flex;flex-direction: column;
+  align-items: center;justify-items: center;
+  border-radius: 10px ;
+  padding: 2%;
+  box-shadow: 10px 10px rgba(235, 235, 235, 0.5);
+}
+
+h1{
+ 
+  font-family: 'Permanent Marker';
+  letter-spacing: 5px;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 200;
+}
+.card p{
+  font-size: 25px;
+ 
+  
+}
+
+button{
+  position: relative;
+  outline: none;
+  display: flex;justify-content: center;align-items: center;
+  background: #ffffff;
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 30px;
+  cursor: pointer;
+  
+ 
+}
+span{
+  font-family: 'Bebas Neue';
+  font-size: 20px; padding:  15px 25px;
+  color: green;letter-spacing: 0.5px;
+}
+
+button:hover{
+  animation: rotation 0.7s ease-in-out both;
+}
+
+@keyframes rotation {
+  0%{
+        transform: rotate(0deg) translate3d(0px, 0px, 0px);
+  }
+  25%{
+        transform: rotate(3deg) translate3d(0px, 0px, 0px);;
+  }
+  50%{
+        transform: rotate(-3deg) translate3d(0px, 0px, 0px);;
+  }
+  100%{
+        transform: rotate(0deg) translate3d(0px, 0px, 0px);;
+  }
+}
+
+
+button:hover span{
+
+  animation: storm 0.7s ease-in-out infinite both;
+  animation-delay: 0.07s;
+}
+@keyframes storm {
+  0%{
+        transform: rotate(0deg) translate3d(0px, 0px, 0px);
+  }
+  25%{
+        transform: rotate(-8deg) translate3d(0px, 0px, 0px);;
+  }
+  50%{
+        transform: rotate(8deg) translate3d(0px, 0px, 0px);;
+  }
+  100%{
+        transform: rotate(0deg) translate3d(0px, 0px, 0px);;
+  }
+}
+
+
+@media only screen and (max-width: 600px ){
+  .card{
+    width: 80%;
+   
+  }
+  .card p{
+  font-size: 15px;
+  
+  margin: 12px 0;
+}
+
+
+}
